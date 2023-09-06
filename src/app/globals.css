@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+main {
+  @apply bg-dark text-white h-screen;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+  @apply text-5xl;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn {
+  @apply font-bold py-3 px-5 flex items-center justify-between gap-3 rounded-2xl;
+}
+.btn-primary {
+  @apply bg-action text-white border border-transparent font-workSans;
+}
+.btn-primary:hover {
+  @apply bg-transparent border border-action;
 }
