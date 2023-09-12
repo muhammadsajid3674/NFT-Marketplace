@@ -2,20 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  @apply bg-dark text-white h-screen;
+body {
+   @apply bg-dark text-white h-screen;
 }
 
 h1 {
-  @apply text-5xl;
+   @apply text-h1 font-semibold;
+}
+h2 {
+   @apply text-h2 font-semibold;
+}
+h3 {
+   @apply text-h3 font-semibold;
+}
+h4 {
+   @apply text-h4 font-semibold;
+}
+h5 {
+   @apply text-h5 font-semibold;
+}
+p {
+   @apply text-body font-workSans;
 }
 
 .btn {
-  @apply font-bold py-3 px-5 flex items-center justify-between gap-3 rounded-2xl;
+   @apply font-bold py-3 px-5 flex items-center justify-between gap-3 rounded-2xl;
 }
 .btn-primary {
-  @apply bg-action text-white border border-transparent font-workSans;
+   @apply bg-action text-white border border-transparent font-workSans;
 }
 .btn-primary:hover {
-  @apply bg-transparent border border-action;
+   @apply bg-transparent border border-action;
+}
+.custom-link-hover {
+   @apply h-[2px] inline-block bg-light absolute left-0 -bottom-1 group-hover:w-full duration-300;
+}
+
+.category-blur {
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 20px 20px 0px 0px;
+   backdrop-filter: blur(15px);
+   height: 100%;
+   width: 100%;
+}
+
+.NFT-bg {
+   background-image: linear-gradient(
+         180deg,
+         rgba(162, 89, 255, 0) 0%,
+         #a259ff 100%
+      ),
+      url("../../public/static/img/NFTbg.png");
+   width: 100%;
+   height: 90vh;
+   background-size: cover;
+}
+
+input {
+   background-color: transparent;
+   border: 0;
+   flex: 1;
+   color: black;
+}
+input:focus {
+   outline: none;
+}
+.input-cont {
+   margin-top: 1rem;
+   align-items: center;
+   align-self: stretch;
+   background-color: white;
+   border-radius: 20px;
+   display: flex;
+   gap: 12px;
+   height: 60px;
+   padding: 16px 0px 16px 20px;
+}
+.input-cont button {
+   height: 60px;
+   margin-bottom: -16px;
+   margin-top: -16px;
+   padding: 0px 50px;
+}
+.input-cont button:hover {
+   color: #a259ff;
+}
+
+.btn-secondary {
+   @apply flex items-center gap-5 p-3 bg-darkDim rounded-3xl border border-action hover:bg-dark;
+}
+.app_input {
+   @apply bg-white p-3 rounded-full;
+}
+
+@media screen and (max-width: 640px) {
+   .main {
+      padding: 0;
+   }
+}
+
+/* Tailwind Styles */
+
+.app {
+   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.head_text {
+   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+
+.desc {
+   @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+
+.copy_btn {
+   @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+   border-radius: 20px;
+   background: rgba(59, 59, 59, 0.5);
+   backdrop-filter: blur(5px);
+   padding: 30px;
+}
+
+.dropdown {
+   @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.flex-center {
+   @apply flex justify-center items-center;
+}
+
+.flex-start {
+   @apply flex justify-start items-start;
+}
+
+.flex-end {
+   @apply flex justify-end items-center;
+}
+
+.flex-between {
+   @apply flex justify-between items-center;
 }
