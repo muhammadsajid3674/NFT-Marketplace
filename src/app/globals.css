@@ -88,11 +88,23 @@ input:focus {
    color: #a259ff;
 }
 
+.creator-list-head{
+   @apply p-3 mb-3 border border-darkDim rounded-full
+}
+.creator-list{
+   @apply p-3 mb-3 bg-darkDim rounded-2xl
+}
+.creator-list p:nth-child(3){
+   @apply text-green-600
+}
 .btn-secondary {
    @apply flex items-center gap-5 p-3 bg-darkDim rounded-3xl border border-action hover:bg-dark;
 }
 .app_input {
    @apply bg-white p-3 rounded-full;
+}
+.search_input {
+   @apply border border-solid border-darkDim p-3 rounded-2xl w-full;
 }
 
 @media screen and (max-width: 640px) {

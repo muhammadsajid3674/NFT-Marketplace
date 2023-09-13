@@ -26,7 +26,7 @@ const Navbar = () => {
       setOpen(!isOpen);
    };
    return (
-      <nav className='flex justify-between items-center bg-dark px-14 py-5 relative text-white'>
+      <nav className='flex justify-between items-center bg-dark px-14 pt-4 relative text-white'>
          <div className='font-bold'>
             <Link className='flex items-center gap-5 mb-3' href={"/"}>
                <Storefront/>
