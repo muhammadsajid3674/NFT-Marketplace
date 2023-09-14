@@ -26,13 +26,11 @@ const Navbar = () => {
       setOpen(!isOpen);
    };
    return (
-      <nav className='flex justify-between items-center bg-dark px-14 pt-4 relative text-white'>
-         <div className='font-bold'>
-            <Link className='flex items-center gap-5 mb-3' href={"/"}>
-               <Storefront/>
-               <h5 className='font-spaceMono'>NFT Marketplace</h5>
-            </Link>
-         </div>
+      <nav className='flex-between bg-dark px-14 py-4 relative text-white'>
+         <Link className='flex-center gap-5' href={"/"}>
+            <Storefront />
+            <h5 className='font-spaceMono'>NFT Marketplace</h5>
+         </Link>
          <div className=' lg:hidden'>
             <ul className='flex items-center gap-10'>
                <li>
@@ -46,7 +44,7 @@ const Navbar = () => {
                </li>
                <li>
                   <Link className='btn btn-primary' href={"/auth"}>
-                     <User className="w-6"/>
+                     <User className='w-6' />
                      <span>Sign up</span>
                   </Link>
                </li>
@@ -66,7 +64,7 @@ const Navbar = () => {
                   </li>
                   <li>
                      <Link className='btn btn-primary' href={"/auth"}>
-                        <User className={"w-6"}/>
+                        <User className={"w-6"} />
                         <span>Sign up</span>
                      </Link>
                   </li>

@@ -51,10 +51,10 @@ const Counter = () => {
 const Collection = ({ primary, secondary = [], name, title, avatar }) => {
    return (
       <div className='flex flex-col gap-5'>
-         <Image src={primary} className='w-full h-auto' />
+         <Image alt="" src={primary} className='w-full h-auto' />
          <div className='flex gap-5'>
             {secondary.map((e, i) => (
-               <Image src={e} key={i} className='w-full h-auto' />
+               <Image alt="" src={e} key={i} className='w-full h-auto' />
             ))}
             <div className='rounded-3xl bg-action flex-center h-full w-full'>
                <h5>2045+</h5>
@@ -64,7 +64,7 @@ const Collection = ({ primary, secondary = [], name, title, avatar }) => {
             <h5>{title}</h5>
             <div className='flex gap-2 my-3'>
                <div>
-                  <Image src={avatar} />
+                  <Image alt="" src={avatar} />
                </div>
                <small>{name}</small>
             </div>
@@ -79,7 +79,7 @@ const Creators = ({ count, sales, title, avatar }) => {
          <div className='absolute top-4 left-5 bg-dark h-8 w-8 flex-center rounded-full'>
             <p className='text-dimCaption'>{count}</p>
          </div>
-         <Image src={avatar} width={"100%"} />
+         <Image alt="" src={avatar} width={"100%"} />
          <div className='text-center mt-4'>
             <h5>{title}</h5>
             <span className='text-dimCaption'>
@@ -95,7 +95,7 @@ const Categories = ({ bg, title, Icon }) => {
    return (
       <div className='bg-darkDim w-full h-full flex-center flex-col rounded-3xl relative '>
          <div className='self-stretch relative rounded-t-lg'>
-            <Image src={bg} className='w-full h-auto' />
+            <Image alt="" src={bg} className='w-full h-auto' />
             <div className='category-blur absolute top-0'></div>
             <Icon className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
          </div>
@@ -110,12 +110,12 @@ const Discover = ({ img, title, avatar, name, price, highestBid }) => {
    return (
       <div className='bg-darkDim w-full h-full flex flex-col rounded-3xl relative '>
          <div className='self-stretch relative rounded-t-lg'>
-            <Image src={img} className='w-full h-auto' />
+            <Image alt="" src={img} className='w-full h-auto' />
          </div>
          <div className='m-5'>
             <h4 className='font-workSans'>{title}</h4>
             <div className='flex gap-2 my-3'>
-               <Image src={avatar} width={"100%"} />
+               <Image alt="" src={avatar} width={"100%"} />
                <p>{name}</p>
             </div>
             <div className='flex-between my-3'>
@@ -195,7 +195,7 @@ export default function Home() {
                   <Counter />
                </div>
                <div className='ms-auto'>
-                  <Image src={Highlighted} />
+                  <Image alt="" src={Highlighted} />
                </div>
             </div>
          </Layout>
@@ -309,7 +309,7 @@ export default function Home() {
          <Layout className='NFT-bg'>
             <div className='flex flex-col justify-end h-full mb-7 rounded-full'>
                <div className='flex gap-2 my-3'>
-                  <Image src={Avatar1} width={"100%"} />
+                  <Image alt="" src={Avatar1} width={"100%"} />
                   <p>Hello world</p>
                </div>
                <div className='flex-between'>
@@ -357,7 +357,7 @@ export default function Home() {
          </Layout>
          <Layout>
             <div className='grid grid-cols-2 gap-10 mb-7 bg-darkDim p-14 rounded-3xl'>
-               <Image src={Astronaut} className='w-full h-auto' />
+               <Image alt="" src={Astronaut} className='w-full h-auto' />
                <div className='flex flex-col justify-center'>
                   <h3>Join our weekly digest</h3>
                   <p className='text-h5'>

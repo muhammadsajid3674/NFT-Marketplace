@@ -22,6 +22,18 @@ import Image3 from "../../public/static/img/Image-2.png";
 import NFTbg from "../../public/static/img/NFTbg.png";
 import Astronaut from "../../public/static/img/astronaut.png";
 import ConnectSide from "../../public/static/img/connect-side.png";
+import ArtistCover from "../../public/static/img/Artist-cover.png";
+import NFTCover from "../../public/static/img/NFT-Cover.png";
+import NFTLg1 from "../../public/static/img/lg/Image-1.png";
+import NFTLg2 from "../../public/static/img/lg/Image.png";
+import NFTLg3 from "../../public/static/img/lg/Image-1.png";
+import NFTLg4 from "../../public/static/img/lg/Image-2.png";
+import NFTLg5 from "../../public/static/img/lg/Image-3.png";
+import NFTLg6 from "../../public/static/img/lg/Image-4.png";
+import NFTLg7 from "../../public/static/img/lg/Image-5.png";
+import NFTLg8 from "../../public/static/img/lg/Image-6.png";
+import NFTLg9 from "../../public/static/img/lg/Image-7.png";
+import NFTLg10 from "../../public/static/img/lg/Image-8.png";
 
 export {
    Highlighted,
@@ -48,4 +60,16 @@ export {
    NFTbg,
    Astronaut,
    ConnectSide,
+   ArtistCover,
+   NFTCover,
+   NFTLg1,
+   NFTLg2,
+   NFTLg3,
+   NFTLg4,
+   NFTLg5,
+   NFTLg6,
+   NFTLg7,
+   NFTLg8,
+   NFTLg9,
+   NFTLg10,
 };

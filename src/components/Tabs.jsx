@@ -20,7 +20,7 @@ const a11yProps = (index) => ({
    "aria-controls": `tabpanel-${index}`,
 });
 
-const Tabs = ({ tabs = [], panel, children, count }) => {
+const Tabs = ({ tabs = [], panel, theme, count, component: Component }) => {
    const [value, setValue] = useState(0);
    const handleClick = (event, newValue) => setValue(newValue);
    return (
@@ -29,7 +29,7 @@ const Tabs = ({ tabs = [], panel, children, count }) => {
             <ul className='flex-center -mb-px text-sm font-medium text-center px-32'>
                {tabs.length > 0 &&
                   tabs.map((e, i) => (
-                     <li className='flex-1 w-64 mr-2'>
+                     <li className='flex-1 w-64 mr-2' key={i}>
                         <button
                            className={`w-full inline-block p-4 text-xl rounded-t-lg border-dimCaption hover:text-dimCaption ${
                               value === i ? "border-b-4" : "border-0"
@@ -50,11 +50,13 @@ const Tabs = ({ tabs = [], panel, children, count }) => {
                   ))}
             </ul>
          </div>
-         <div>
+         <div className={theme}>
             {panel.length > 0 &&
                panel.map((e, i) => (
-                  <CustomTabPanel value={value} index={i}>
-                     {children}
+                  <CustomTabPanel value={value} index={i} key={i}>
+                     <div className='grid grid-cols-12 gap-5'>
+                        <Component data={e} />
+                     </div>
                   </CustomTabPanel>
                ))}
          </div>

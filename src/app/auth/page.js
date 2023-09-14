@@ -6,7 +6,7 @@ const Connect = () => {
    return (
       <div className='grid grid-cols-12'>
          <div className='col-span-6'>
-            <Image src={ConnectSide} width={'100%'} />
+            <Image alt="" src={ConnectSide} width={'100%'} />
          </div>
          <div className='col-span-6 self-center'>
             <h2>Create Account</h2>

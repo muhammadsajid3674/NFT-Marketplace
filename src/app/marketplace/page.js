@@ -1,3 +1,4 @@
+"use client";
 import Layout from "@/components/Layout";
 import Tabs from "@/components/Tabs";
 import { MagnifyingGlass } from "@/core/icon";
@@ -5,32 +6,41 @@ import { nfts } from "@/core/sample/nfts";
 import Image from "next/image";
 import React from "react";
 
-const NFTCards = ({ item, index }) => (
-   <div
-      key={index}
-      className='col-span-4 bg-dark w-full h-full flex flex-col rounded-3xl relative '
-   >
-      <div className='self-stretch relative rounded-t-lg'>
-         <Image src={item.img} className='w-full h-auto' />
-      </div>
-      <div className='m-5'>
-         <h4>{item.title}</h4>
-         <div className='flex gap-2 my-3'>
-            <Image src={item.avatar} width={"100%"} />
-            <p>{item.name}</p>
-         </div>
-         <div className='flex-between my-3'>
-            <div>
-               <small className='text-dimCaption'>Price</small>
-               <p className='font-spaceMono'>{item.price} ETH</p>
+const NFTCards = ({ data }) => (
+   <>
+      {data.length > 0 &&
+         data.map((e, i) => (
+            <div
+               key={i}
+               className='col-span-4 bg-dark w-full h-full flex flex-col rounded-3xl relative '
+            >
+               <div className='self-stretch relative rounded-t-lg'>
+                  <Image alt="" src={e.img} className='w-full h-auto' />
+               </div>
+               <div className='m-5'>
+                  <h4>{e.title}</h4>
+                  <div className='flex gap-2 my-3'>
+                     <Image alt="" src={e.avatar} width={"100%"} />
+                     <p>{e.name}</p>
+                  </div>
+                  <div className='flex-between my-3'>
+                     <div>
+                        <small className='text-dimCaption'>Price</small>
+                        <p className='font-spaceMono'>{e.price} ETH</p>
+                     </div>
+                     <div>
+                        <small className='text-dimCaption'>
+                           Highest Bid
+                        </small>
+                        <p className='font-spaceMono'>
+                           {e.highestBid} wETH
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div>
-               <small className='text-dimCaption'>Highest Bid</small>
-               <p className='font-spaceMono'>{item.highestBid} wETH</p>
-            </div>
-         </div>
-      </div>
-   </div>
+         ))}
+   </>
 );
 
 const Marketplace = () => {
@@ -54,14 +64,13 @@ const Marketplace = () => {
             </div>
          </Layout>
          <Layout className='!p-0'>
-            <Tabs tabs={["NFTs", "Collections"]} panel={[nfts, []]} count>
-               <div className='grid grid-cols-12 gap-5'>
-                  {nfts.length > 0 &&
-                     nfts.map((item, index) => (
-                        <NFTCards item={item} index={index} />
-                     ))}
-               </div>
-            </Tabs>
+            <Tabs
+               tabs={["NFTs", "Collections"]}
+               panel={[nfts, []]}
+               count
+               component={NFTCards}
+               theme={"bg-darkDim"}
+            />
          </Layout>
          <div className='border-2 border-dark' />
       </main>
